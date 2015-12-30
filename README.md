@@ -1,5 +1,5 @@
 #Tymp
-Also called "The Youtube Music Player", it's a fan made app to play music from YouTube just how you play offline music.
+Also called "The Youtube Music Player", this fan made app has to act like you expect to play normal music.
 
 ###Goal:
 Search youtube and stream directly or store the videoid with some ID3 tags gathered from musicbrainz or something store it in a local db so you can find it easily and it looks beautifull in your **Tymp** queue.
