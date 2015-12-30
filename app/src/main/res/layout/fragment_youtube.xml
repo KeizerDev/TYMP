@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You still have to add it manual, we will implement search as soon as possible" />
+
+
+    <EditText
+        android:id="@+id/addsong_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:hint="November Rain" />
+
+    <EditText
+        android:id="@+id/addsong_artist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:hint="Guns N Roses" />
+
+    <EditText
+        android:id="@+id/addsong_albumurl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:hint="Album url, can be blank" />
+
+    <EditText
+        android:id="@+id/addsong_videoid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:hint="https://www.youtube.com/watch?v=1G4isv_Fylg" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Is valid"
+        android:textColor="#33691e" />
+
+    <Button
+        android:id="@+id/addsong_to_db"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Add to songs" />
+
+</LinearLayout>
