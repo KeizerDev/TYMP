@@ -1,8 +1,10 @@
 #Tymp
-Also called "The Youtube Music Player", this fan made app has to act like you expect to play normal music.
+<img src="https://raw.githubusercontent.com/KeizerDev/TYMP/master/app/src/main/res/drawable/tymp.png" height="64" width="64"/>
+
+Also called "The Youtube Music Player", this fan made app has to act like you expect to play normal music.  
 
 ###Goal:
-Search youtube and stream directly or store the videoid with some ID3 tags gathered from musicbrainz or something store it in a local db so you can find it easily and it looks beautifull in your **Tymp** queue.
+Search youtube and stream it as music or store the videoid, with some extra track information from musicbrainz (or something else), in a local DB so you can find it back easily. I has to act perfectly as a music player with YouTube as music source.  
 
 ###Milestones:
 1. [X] Add videos to local db and stream them like a song.
