@@ -5,8 +5,9 @@ Also called "The Youtube Music Player", this fan made app has to act like you ex
 Search youtube and stream directly or store the videoid with some ID3 tags gathered from musicbrainz or something store it in a local db so you can find it easily and it looks beautifull in your **Tymp** queue.
 
 ###Milestones:
-1. [X] Add songs to db and stream them.
-2. [ ] Search youtube and "music" in the music player.
-2. [ ] Search youtube and choose to play it right away or add it to queue.
-3. [ ] Create local db with extra track information if user wanted to.
-4. [ ] Make playlists.
+1. [X] Add videos to local db and stream them like a song.
+2. [ ] Create a decent music player and UI. 
+3. [ ] Search youtube and "music" in the music player.
+4. [ ] Search youtube and choose to play it right away or add it to queue.
+5. [ ] Create local db with extra track information if user wanted to.
+6. [ ] Make playlists.
