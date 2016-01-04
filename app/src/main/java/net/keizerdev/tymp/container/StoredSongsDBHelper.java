@@ -86,6 +86,8 @@ public class StoredSongsDBHelper extends SQLiteOpenHelper {
 
         Log.d("getAllStoredSongs()", storedSong.toString());
 
+        db.close();
+
         return storedSongs;
     }
 }

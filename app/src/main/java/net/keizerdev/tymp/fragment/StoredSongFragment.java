@@ -15,6 +15,7 @@ import net.keizerdev.tymp.R;
 import net.keizerdev.tymp.adapter.StoredSongAdapter;
 import net.keizerdev.tymp.container.StoredSong;
 import net.keizerdev.tymp.container.StoredSongsDBHelper;
+import net.keizerdev.tymp.util.YoutubeMediaPlayer;
 import net.keizerdev.tymp.youtube.YouTubeUriExtractor;
 import net.keizerdev.tymp.youtube.container.YtFile;
 
@@ -28,8 +29,10 @@ public class StoredSongFragment extends Fragment {
 
     List<StoredSong> list = new ArrayList<>();
     private StoredSongAdapter adapter;
+    YoutubeMediaPlayer youtubeMediaPlayer;
 
     public StoredSongFragment() {
+        youtubeMediaPlayer = new YoutubeMediaPlayer();
     }
 
     @Override
@@ -37,10 +40,11 @@ public class StoredSongFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_storedsong, container, false);
 
         StoredSongsDBHelper db = new StoredSongsDBHelper(getContext());
-//        db.addStoredSong(new StoredSong("Paint it black", "The Rolling stones", "http://placehold.it/300x300", "https://www.youtube.com/watch?v=O4irXQhgMqg"));
-//        db.addStoredSong(new StoredSong("I can't get no", "The Rolling stones", "http://placehold.it/300x300", "https://www.youtube.com/watch?v=nrIPxlFzDi0"));
-//        db.addStoredSong(new StoredSong("Land of Confusion", "Genesis", "http://placehold.it/300x300", "https://www.youtube.com/watch?v=1pkVLqSaahk"));
-        list = db.getAllStoredSongs();
+        if (db.getAllStoredSongs() != null) {
+            list = db.getAllStoredSongs();
+        } else {
+            list.add(new StoredSong("Paint it black - The Rolling Stones", "Test video :)", "http://placehold.it/300x300", "https://www.youtube.com/watch?v=O4irXQhgMqg"));
+        }
 
         listView = (ListView) view.findViewById(R.id.songsListContainer);
         adapter = new StoredSongAdapter(getActivity(), list);
@@ -61,7 +65,6 @@ public class StoredSongFragment extends Fragment {
         YouTubeUriExtractor ytEx = new YouTubeUriExtractor(getContext()) {
             @Override
             public void onUrisAvailable(String videoId, String videoTitle, SparseArray<YtFile> ytFiles) {
-//                mainProgressBar.setVisibility(View.GONE);
 
                 if (ytFiles == null) {
                     // Something went wrong we got no urls. Always check this.
@@ -97,23 +100,13 @@ public class StoredSongFragment extends Fragment {
         String filename;
 //        filename = videoTitle.substring(0, 55) + "." + ytfile.getMeta().getExt();
         filename = videoTitle + "." + ytfile.getMeta().getExt();
-        downloadFromUrl(ytfile.getUrl(), videoTitle, filename);
+        playYoutubeMedia(ytfile.getUrl());
     }
 
-    private void downloadFromUrl(String youtubeDlUrl, String downloadTitle, String fileName) {
-        System.out.println(youtubeDlUrl + " - " + downloadTitle + " - " + fileName);
-        final MediaPlayer mediaPlayer = new MediaPlayer();
+    private void playYoutubeMedia(String youtubeDlUrl) {
         try {
-            mediaPlayer.setDataSource(youtubeDlUrl);
-            mediaPlayer.prepareAsync();
-            mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-            mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mp) {
-                    mediaPlayer.start();
-                    System.out.println(mp.isPlaying());
-                }
-            });
+            System.out.println(youtubeDlUrl);
+            youtubeMediaPlayer.playYoutubeSource(youtubeDlUrl);
         } catch (IOException e) {
             e.printStackTrace();
         }

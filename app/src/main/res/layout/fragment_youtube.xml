@@ -9,37 +9,13 @@
         android:layout_height="wrap_content"
         android:text="You still have to add it manual, we will implement search as soon as possible" />
 
-
-    <EditText
-        android:id="@+id/addsong_title"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:hint="November Rain" />
-
-    <EditText
-        android:id="@+id/addsong_artist"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:lines="1"
-        android:hint="Guns N Roses" />
-
-    <EditText
-        android:id="@+id/addsong_albumurl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:lines="1"
-        android:hint="Album url, can be blank" />
-
     <EditText
         android:id="@+id/addsong_videoid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ellipsize="end"
-        android:lines="1"
-        android:hint="https://www.youtube.com/watch?v=1G4isv_Fylg" />
+        android:hint="https://www.youtube.com/watch?v=1G4isv_Fylg"
+        android:lines="1" />
 
     <TextView
         android:layout_width="match_parent"
