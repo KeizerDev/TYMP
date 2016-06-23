@@ -4,10 +4,11 @@
 The Youtube Android app that works with the Chromecast Audio.
 </p>
 <p align="center">
-Also called "The Youtube Music Player", this fan made app has to act like you expect to play normal music and add some more features I/we are missing from the original app.
-</p>
-<p align="center">
     <img src="https://raw.githubusercontent.com/KeizerDev/TYMP/master/app/src/main/res/drawable/tymp.png" height="64" width="64"/>
+</p>
+----
+<p align="center">
+TYMP stands for "*T*he *Y*outube *M*usic *P*layer" and is a fan made app which has to act like you expect from a normal music player with the ease of Chromecast support and some more features I/we are missing from the original app.
 </p>
 
 ###Goal:
