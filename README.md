@@ -8,7 +8,7 @@ The Youtube Android app that works with the Chromecast Audio.
 </p>
 ----
 <p align="center">
-TYMP stands for "*T*he *Y*outube *M*usic *P*layer" and is a fan made app which has to act like you expect from a normal music player with the ease of Chromecast support and some more features I/we are missing from the original app.
+TYMP stands for "<b>T</b>he <b>Y</b>outube <b>M</b>usic <b>P</b>layer" and is a fan made app which has to act like you expect from a normal music player with the ease of Chromecast support and some more features I/we are missing from the original app.
 </p>
 
 ###Goal:
