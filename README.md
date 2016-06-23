@@ -1,7 +1,14 @@
-#Tymp
-<img src="https://raw.githubusercontent.com/KeizerDev/TYMP/master/app/src/main/res/drawable/tymp.png" height="64" width="64"/>
+<h1 align="center">Tymp</h1>
 
-Also called "The Youtube Music Player", this fan made app has to act like you expect to play normal music.  
+<p align="center">
+The Youtube Android app that works with the Chromecast Audio.
+</p>
+<p align="center">
+Also called "The Youtube Music Player", this fan made app has to act like you expect to play normal music and add some more features I/we are missing from the original app.
+</p>
+<p align="center">
+    <img src="https://raw.githubusercontent.com/KeizerDev/TYMP/master/app/src/main/res/drawable/tymp.png" height="64" width="64"/>
+</p>
 
 ###Goal:
 Search youtube and stream it as music or store the videoid, with some extra track information from musicbrainz (or something else), in a local DB so you can find it back easily. I has to act perfectly as a music player with YouTube as music source.  
